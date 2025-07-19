@@ -1,0 +1,69 @@
+/* === BODY UMUM / LATAR BELAKANG HALAMAN === */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f3f3f3;
+}
+
+/* === KONTENER UTAMA (BUNGKUS KONTEN DI TENGAH HALAMAN) === */
+.container {
+  max-width: 600px;
+  margin: auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* === INPUT TEKS UNTUK MASUKKAN KODE (QR, RESERVASI, DLL) === */
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* === WRAPPER UNTUK BEBERAPA TOMBOL DALAM 1 BARIS === */
+.button-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+/* === GAYA UMUM UNTUK SEMUA TOMBOL === */
+.btn-primary,
+.btn-secondary,
+.btn-pay {
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* === TOMBOL UTAMA (BIRU), CONTOH: CHECK KODE === */
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+/* === TOMBOL SEKUNDER (HIJAU), CONTOH: BUKA LOKER === */
+.btn-secondary {
+  background-color: #28a745;
+  color: white;
+}
+
+/* === TOMBOL PEMBAYARAN (KUNING), LEBAR PENUH === */
+.btn-pay {
+  background-color: #ffc107;
+  color: black;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* === PESAN STATUS (BERHASIL / GAGAL / DLL) === */
+.status-msg {
+  margin-bottom: 10px;
+}

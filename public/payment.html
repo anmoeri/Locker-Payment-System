@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pembayaran & Buka Loker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- 🔗 Menghubungkan file CSS untuk tampilan -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- 🔥 Firebase: Library inti dan Firestore -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+
+  <!-- ⚙️ Konfigurasi Firebase (API key, project ID, dll) -->
+  <script src="firebase-config.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Pembayaran & Buka Loker</h1>
+
+    <!-- 🧾 Input untuk memasukkan kode QR / kode unik reservasi -->
+    <input type="text" id="qrInput" placeholder="Masukkan kode pembayaran..." />
+
+    <!-- 🔘 Tombol untuk periksa kode dan buka loker -->
+    <div class="button-group">
+      <button id="checkBtn" class="btn-primary">Periksa Kode</button>
+      <button id="openLockerBtn" class="btn-secondary">Buka Loker</button>
+    </div>
+
+    <!-- 🟡 Area status untuk menampilkan info seperti 'Reservasi ditemukan' -->
+    <div id="status" class="status-msg"></div>
+
+    <!-- 📋 Menampilkan detail reservasi (tanggal, loker, durasi, dsb) -->
+    <div id="reservationDetails"></div>
+
+    <!-- 💳 Tombol untuk memproses pembayaran (muncul jika valid) -->
+    <button id="confirmPayBtn" class="btn-pay" style="display:none;">Bayar Sekarang</button>
+  </div>
+
+  <!-- 📜 Script utama yang menangani logika: validasi kode, pembayaran, buka loker -->
+  <script src="payment.js"></script>
+</body>
+</html>
